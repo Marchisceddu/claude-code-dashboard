@@ -1,0 +1,24 @@
+{
+  "name": "dashboard",
+  "version": "0.9.0",
+  "description": "A pane beside the Claude Code chat: what each message changed (files, +/− lines, diff, click to open in your editor) and the texts Claude writes for you to paste, one key each.",
+  "author": { "name": "Marco Pilia" },
+  "license": "MIT",
+  "keywords": ["mod", "pane", "diff", "clipboard", "editor"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Language",
+      "description": "Labels of the pane. auto: Claude Code's language setting, else the system locale (English unless Italian).",
+      "default": "auto",
+      "options": ["auto", "en", "it"]
+    },
+    "editor": {
+      "type": "string",
+      "title": "Editor command",
+      "description": "Command that opens a changed file, with {file} and {line}, e.g. code -g {file}:{line}. Empty: the editor the session runs in (Antigravity, VS Code, Cursor, VSCodium), else the system opener.",
+      "default": ""
+    }
+  }
+}
